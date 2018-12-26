@@ -48,8 +48,8 @@ public class ForEachTest {
             System.out.println(key + " :  " + value);
         }
         System.out.println("--------------------map的Lamdba遍历方式 3-----------------------");
-        map.forEach((key,value)->{
-            System.out.println(key+ " :  " + value);
+        map.forEach((key, value) -> {
+            System.out.println(key + " :  " + value);
         });
 
     }

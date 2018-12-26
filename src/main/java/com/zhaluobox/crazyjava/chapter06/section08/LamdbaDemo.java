@@ -10,13 +10,12 @@ import java.util.function.Consumer;
  * 定义一个函数式接口
  */
 @FunctionalInterface
-interface Ttttt
-{
+interface Ttttt {
     Integer get(int title);
 }
 
+//JVM编译的时候提醒检测是否是函数式接口
 @FunctionalInterface
-        //JVM编译的时候提醒检测是否是函数式接口
 interface fire {
 
     //定义一个类方法
@@ -35,7 +34,7 @@ interface fire {
 }
 
 @FunctionalInterface
-interface Conver{
+interface Conver {
     Integer convert(String from);
 }
 
@@ -57,6 +56,17 @@ public class LamdbaDemo {
 
     @Test
     public void test1() {
+
+        LamdbaDemo lamdbaDemo = new LamdbaDemo();
+
+        //将Lamdba表达式赋值给函数式接口类型的变量
+        fire f2 = str -> System.out.println("lamdba 为函数式接口而生,它的目标就是函数式接口");
+
+        //将Lamdba表达式作为函数式接口类型的参数传给某个方法
+        lamdbaDemo.lamdbaTest(str -> System.out.println("lamdba 为函数式接口而生,它的目标就是函数式接口"));
+
+        //使用函数式接口对Lamdba表达式进行强制转换
+        Object f3 =(fire) str -> System.out.println("lamdba 为函数式接口而生,它的目标就是函数式接口");
 
         System.out.println("=======匿名内部类==========");
         String s = "燃烧我的卡路里";
@@ -90,8 +100,8 @@ public class LamdbaDemo {
         }
 
         System.out.println("----------Lamdba 只有一条return 语句的情况下省略return与花括号--------");
-        Ainter ainter = (a, b) -> a - b > 0 ? a : b;
-        Integer max = ainter.getMax(3, 21);
+        Ainter  ainter = (a, b) -> a - b > 0 ? a : b;
+        Integer max    = ainter.getMax(3, 21);
         System.out.println(max);
     }
 
@@ -117,6 +127,8 @@ public class LamdbaDemo {
         list.forEach((i) -> {
             System.out.println(i + 3);
         });
+        System.out.println("------------------------------------------------------------");
+        list.forEach(i -> System.out.println(i + "省略形参圆括号() 与 代码块只有一条一句省略花括号"));
 
         System.out.println("=========传入匿名内部类的方式======");
         list.forEach(new Consumer<Integer>() {
@@ -130,14 +142,14 @@ public class LamdbaDemo {
         list.forEach(System.out::println);
 
         System.out.println("-----------某类对象的特殊引用方法");
-        Ainter aa = (a,b) -> a.compareTo(b);
+        Ainter aa = (a, b) -> a.compareTo(b);
 
         System.out.println("=======引用特定对象实例的方法=======");
         Conver converter = "fkit.org"::indexOf;
 
         System.out.println("=======引用构造器=======");
         Ttttt ttttt = Integer::new;
-        System.out.println( ttttt.get(1));
+        System.out.println(ttttt.get(1));
 
     }
 
@@ -162,8 +174,8 @@ public class LamdbaDemo {
             System.out.println(key + " :  " + value);
         }
         System.out.println("--------------------map的Lamdba遍历方式 3-----------------------");
-        map.forEach((key,value)->{
-            System.out.println(key+ " :  " + value);
+        map.forEach((key, value) -> {
+            System.out.println(key + " :  " + value);
         });
 
     }
