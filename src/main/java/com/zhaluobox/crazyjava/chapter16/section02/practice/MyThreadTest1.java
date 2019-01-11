@@ -1,5 +1,6 @@
 package com.zhaluobox.crazyjava.chapter16.section02.practice;
 
+import com.zhaluobox.crazyjava.chapter16.practice.TicketThread;
 import org.junit.Test;
 
 import java.util.concurrent.ExecutionException;
@@ -70,27 +71,64 @@ public class MyThreadTest1 {
 
     /**
      * 多线程方式3
+     *   类似于 runnable形式的多线程
+     *   只不过callable允许有异常 和 返回值
      *
      * @throws ExecutionException
      * @throws InterruptedException
      */
     @Test
     public void threadTest4() throws ExecutionException, InterruptedException {
+
+        /* lamdba 的形式去创建calllable */
         FutureTask<Integer> task = new FutureTask<>(() -> {
             int sum = 0;
             for (int i = 0; i < 100; i++) {
                 System.out.println(Thread.currentThread().getName() + " : " + i);
                 sum += i;
             }
+            // 返回值
             return sum;
         });
-
+        //启动方式类似于runnable
         new Thread(task, "线程1").start();
-        System.out.println("----------");
-        new Thread(task, "线程2").start();
-        System.out.println("-------");
+        //返回值
         System.out.println(task.get());
     }
 
+    /**
+     * 随便测测
+     */
+    @Test
+    public void test4(){
+        //创建线程实例
+        MyThread mt = new MyThread();
+        //修改线程名字
+        mt.setName("张三");
+
+        //启动线程
+        mt.start();
+
+        //创建线程实例
+        MyThread mt2 = new MyThread();
+        mt2.setName("老王");
+
+        //启动线程
+        mt2.start();
+    }
+
+    /**
+     * 随便测测
+     */
+    @Test
+    public void test5(){
+        TicketThread toc = new TicketThread();
+        Thread t1 = new Thread(toc, "abc");
+        t1.start();
+        Thread t2 = new Thread(toc, "adcccc");
+        t2.start();
+        Thread t3 = new Thread(toc, "cdajka");
+        t3.start();
+    }
 
 }
