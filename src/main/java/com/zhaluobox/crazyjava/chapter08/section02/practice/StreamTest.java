@@ -28,6 +28,19 @@ public class StreamTest {
     }
 
     @Test
+    public void test() {
+        Stream.Builder<Book> s = Stream.builder();
+        s.accept(new Book("安徒生童话", 32.5d));
+        s.accept(new Book("海底世界两万里", 32.3d));
+        s.accept(new Book("钢铁是怎么样炼成的", 28.9d));
+        s.accept(new Book("一千零一夜", 56.9d));
+        s.accept(new Book("中华上下五千年", 99.9d));
+
+        s.build().forEach(System.out::println);
+
+    }
+
+    @Test
     public void test1() {
 
         /*
@@ -71,7 +84,7 @@ public class StreamTest {
 
 
     @Test
-    public void test2(){
+    public void test2() {
         OptionalDouble any = books.stream().mapToDouble(book -> book.getPrice()).findAny();
         System.out.println(any.toString());
         OptionalDouble first = books.stream().mapToDouble(book -> book.getPrice()).findFirst();
@@ -79,7 +92,11 @@ public class StreamTest {
 
         // 遍历
         books.stream().filter(book -> null != book).forEach(System.out::println);
+
+        // 先排序后遍历
+        books.stream().mapToDouble(b -> b.getPrice()).sorted().forEach(System.out::println);
     }
+
 
 }
 

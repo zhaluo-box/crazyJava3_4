@@ -10,3 +10,28 @@
 - 本代码中可能大部分是copy的.但是也有自己的一些心血.自己对java基础的一些理解
 - 在代码中添加了一部分源码,里面有一部分自己的注释
 
+
+## 包结构介绍
+
+- com.zhaluobox.crazyjava
+    - chapter 01
+    - chapter 02
+    - chapter 03
+    - chapter 04
+    - chapter 05
+    - chapter 06
+    - chapter 07
+    - chapter 08
+    - chapter 09
+    - chapter 10
+    - chapter 11
+    - chapter 12
+    - chapter 13
+    - chapter 14
+    - chapter 15
+    - chapter 16 多线程
+        - section 02 创建多线程的3种方式
+        - section 03
+        - section 04
+    - chapter 17
+
