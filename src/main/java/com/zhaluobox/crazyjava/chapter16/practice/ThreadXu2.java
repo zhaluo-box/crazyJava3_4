@@ -4,12 +4,15 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * 同步方法示例
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class ThreadXu2 implements Runnable {
 
-    private AccountXu2 acc;   // 账户
+    private AccountXu acc;   // 账户
     private double payMoney; // 红包金额
     private long size;       // 个数
     private int sum;         // 计数

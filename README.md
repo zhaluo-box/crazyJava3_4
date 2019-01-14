@@ -30,6 +30,8 @@
     - chapter 14
     - chapter 15
     - chapter 16 多线程
+        - priactice 练习自己写的
+            - 添加多线程的同步代码块与同步方法 示例
         - section 02 创建多线程的3种方式
         - section 03
         - section 04
