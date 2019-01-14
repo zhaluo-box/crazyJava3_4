@@ -1,16 +1,6 @@
 package com.zhaluobox.crazyjava.chapter16.section05;
 
-/**
- * Description:取钱的线程类 <br/>
- * 网站: <a href="http://www.crazyit.org">疯狂Java联盟</a> <br/>
- * Copyright (C), 2001-2016, Yeeku.H.Lee <br/>
- * This program is protected by copyright laws. <br/>
- * Program Name: <br/>
- * Date:
- * 
- * @author Yeeku.H.Lee kongyeeku@163.com
- * @version 1.0
- */
+
 public class DrawThread extends Thread {
 	// 模拟用户账户
 	private Account account;
@@ -40,6 +30,7 @@ public class DrawThread extends Thread {
 */			
 			// 修改余额
 			account.setBalance(account.getBalance() - drawAmount);
+
 			System.out.println("\t取款后余额为: " + account.getBalance());
 		} else {
 			System.out.println(getName() + "取钱失败！余额不足！");

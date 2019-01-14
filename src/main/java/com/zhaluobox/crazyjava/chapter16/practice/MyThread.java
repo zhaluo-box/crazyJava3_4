@@ -1,4 +1,4 @@
-package com.zhaluobox.crazyjava.chapter16.section02.practice;
+package com.zhaluobox.crazyjava.chapter16.practice;
 
 /**
  * 多线程的实现方式1

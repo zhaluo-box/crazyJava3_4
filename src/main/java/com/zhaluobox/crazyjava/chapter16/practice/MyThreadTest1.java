@@ -1,6 +1,5 @@
-package com.zhaluobox.crazyjava.chapter16.section02.practice;
+package com.zhaluobox.crazyjava.chapter16.practice;
 
-import com.zhaluobox.crazyjava.chapter16.practice.TicketThread;
 import org.junit.Test;
 
 import java.util.concurrent.ExecutionException;

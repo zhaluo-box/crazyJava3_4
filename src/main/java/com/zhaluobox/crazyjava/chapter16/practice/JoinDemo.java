@@ -1,4 +1,4 @@
-package com.zhaluobox.crazyjava.chapter16.section04.priactice;
+package com.zhaluobox.crazyjava.chapter16.practice;
 
 public class JoinDemo {
 

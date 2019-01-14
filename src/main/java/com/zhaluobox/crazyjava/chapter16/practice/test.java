@@ -4,7 +4,7 @@ package com.zhaluobox.crazyjava.chapter16.practice;
 public class test {
 
     public static void main(String[] args) {
-        //创建线程对象
+        //创建公共的线程对象
         TicketThread tt = new TicketThread();
 
         Thread t = new Thread(tt);
