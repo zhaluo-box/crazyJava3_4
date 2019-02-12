@@ -13,6 +13,10 @@ import java.util.List;
 public class RuntimeConstantPoolOOM {
 
     public static void main(String[] args) {
+       // stringIntern();
+    }
+
+    private static void stringIntern() {
         List<String> list = new ArrayList<>();
         int i = 0;
         while (true) {
