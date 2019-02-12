@@ -2,20 +2,11 @@ package com.zhaluobox.crazyjava.chapter16.section05.Lock;
 
 import java.util.concurrent.locks.*;
 
-/**
- * Description: <br/>
- * 网站: <a href="http://www.crazyit.org">疯狂Java联盟</a> <br/>
- * Copyright (C), 2001-2016, Yeeku.H.Lee <br/>
- * This program is protected by copyright laws. <br/>
- * Program Name: <br/>
- * Date:
- * 
- * @author Yeeku.H.Lee kongyeeku@163.com
- * @version 1.0
- */
+
 public class Account {
 	// 定义锁对象
 	private final ReentrantLock lock = new ReentrantLock();
+
 	// 封装账户编号、账户余额的两个成员变量
 	private String accountNo;
 	private double balance;
