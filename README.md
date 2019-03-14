@@ -28,7 +28,7 @@
     - chapter 12
     - chapter 13
     - chapter 14
-    - chapter 15
+    - chapter 15 Io流
     - chapter 16 多线程
         - priactice 练习自己写的
             - 添加多线程的同步代码块与同步方法 示例
@@ -36,4 +36,7 @@
         - section 03
         - section 04
     - chapter 17
+    -jvm 是深入jvm虚拟机的学习
+    -offer 是面试相关常考一些东西
+        -sort  排序
 

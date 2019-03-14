@@ -2,6 +2,8 @@ package com.zhaluobox.crazyjava.test1;
 
 import org.junit.Test;
 
+import java.math.BigDecimal;
+
 public class NumberTest {
 
     @Test
@@ -12,5 +14,16 @@ public class NumberTest {
             }
 //            System.out.println(i / 5);
         }
+    }
+
+    /**
+     * 测试结论 : bigdecimal 不能为null ,很容易报空指针异常
+     */
+    @Test
+    public void test2(){
+        BigDecimal b = BigDecimal.ZERO;
+        BigDecimal c = null;
+        b = b.add(c);
+        System.out.println(b);
     }
 }
