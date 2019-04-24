@@ -1,5 +1,10 @@
 package com.zhaluobox.designMode.factorymode2;
 
+import com.zhaluobox.commons.ClassUtils;
+
+import java.util.List;
+import java.util.Random;
+
 /**
  * 工厂类,这个工厂类相比示例1 更加完善;
  */
@@ -16,6 +21,19 @@ public class HumanFactory {
         } catch (ClassNotFoundException e) { //你随便说个人类，我到哪里给你制造去？！
             System.out.println("混蛋，你指定的人类找不到！ ");
         }
+        return human;
+    }
+
+    //女娲生气了，把一团泥巴塞到八卦炉，哎产生啥人类就啥人类
+    public static Human createHuman(){
+        Human human=null; //定义一个类型的人类
+        //首先是获得有多少个实现类，多少个人类
+        List<Class> concreteHumanList =
+                ClassUtils.getAllClassByInterface(Human.class); //定义了多少人类
+        //八卦炉自己开始想烧出什么人就什么人
+        Random random = new Random();
+        int rand = random.nextInt(concreteHumanList.size());
+        human = createHuman(concreteHumanList.get(rand));
         return human;
     }
 }
