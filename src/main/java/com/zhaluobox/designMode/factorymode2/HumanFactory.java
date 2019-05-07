@@ -24,6 +24,19 @@ public class HumanFactory {
         return human;
     }
 
+    public static Human createHuman2(Class c){
+        Human human=null; //定义一个类型的人类
+        try {
+//            human = (Human)Class.forName(c.getName()).newInstance(); //产生一个人类
+            human = (Human)c.newInstance(); //产生一个人类
+        } catch (InstantiationException e) {//你要是不说个人类颜色的话，没法烤，要白的黑，你说话了才好烤
+            System.out.println("必须指定人类的颜色");
+        } catch (IllegalAccessException e) { //定义的人类有问题，那就烤不出来了，这是...
+            System.out.println("人类定义错误！ ");
+        }
+        return human;
+    }
+
     //女娲生气了，把一团泥巴塞到八卦炉，哎产生啥人类就啥人类
     public static Human createHuman(){
         Human human=null; //定义一个类型的人类
