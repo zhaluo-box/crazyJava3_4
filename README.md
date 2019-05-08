@@ -13,30 +13,37 @@
 
 ## 包结构介绍
 
-- com.zhaluobox.crazyjava
-    - chapter 01
-    - chapter 02
-    - chapter 03
-    - chapter 04
-    - chapter 05
-    - chapter 06
-    - chapter 07
-    - chapter 08
-    - chapter 09
-    - chapter 10
-    - chapter 11
-    - chapter 12
-    - chapter 13
-    - chapter 14
-    - chapter 15 Io流
-    - chapter 16 多线程
-        - priactice 练习自己写的
-            - 添加多线程的同步代码块与同步方法 示例
-        - section 02 创建多线程的3种方式
-        - section 03
-        - section 04
-    - chapter 17
-    -jvm 是深入jvm虚拟机的学习
-    -offer 是面试相关常考一些东西
+- com.zhaluobox
+    - commons
+    - crazyjava 疯狂java部分学习
+        - chapter 01
+        - chapter 02
+        - chapter 03
+        - chapter 04
+        - chapter 05
+        - chapter 06
+        - chapter 07
+        - chapter 08
+        - chapter 09
+        - chapter 10
+        - chapter 11
+        - chapter 12
+        - chapter 13
+        - chapter 14
+        - chapter 15 Io流
+        - chapter 16 多线程
+            - priactice 练习自己写的
+                - demo1 多线程的三种实现方式
+                - 添加多线程的同步代码块与同步方法 示例
+            - section 02 创建多线程的3种方式
+            - section 03
+            - section 04
+        - chapter 17
+    - designMode 设计模式学习
+    - jvm 是深入jvm虚拟机的学习
+        - factorymode1 工厂模式demo1
+        - factorymode2 工厂模式demo2
+        - proxymode1  代理模式
+    - offer 是面试相关常考一些东西
         -sort  排序
 
