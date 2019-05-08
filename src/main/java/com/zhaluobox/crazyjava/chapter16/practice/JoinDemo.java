@@ -4,31 +4,36 @@ public class JoinDemo {
 
     /**
      * 主线程
+     *
      * @param args
      */
     public static void main(String[] args) {
 
+        Thread.currentThread().setName("聊天");
         /**
          * 子线程1
          */
         Thread eat = new Thread(() -> {
             for (int i = 0; i < 100; i++) {
-                System.out.println(Thread.currentThread().getName() + " 吃了 " + i + "分钟");
+                System.out.println(Thread.currentThread().getName() + " " + i + "分钟");
             }
-        }, "张三");
+        }, "吃");
         eat.start();
 
-        for (int i = 0; i < 100 ; i++) {
-            if(i == 30){
-
+        for (int i = 0; i < 100; i++) {
+            System.out.println(Thread.currentThread().getName() + " : " + i + "分钟");
+            if (i == 30) {
+                System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++");
+                System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++");
+                System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++");
                 /**
                  * 子线程2
                  */
                 Thread drink = new Thread(() -> {
                     for (int j = 0; j < 100; j++) {
-                        System.out.println(Thread.currentThread().getName() + " 喝了 " + j + "毫升豆奶");
+                        System.out.println(Thread.currentThread().getName() + " " + j + "毫升豆奶");
                     }
-                }, "张三");
+                }, "喝");
                 drink.start();
                 try {
                     drink.join();
@@ -36,7 +41,7 @@ public class JoinDemo {
                     e.printStackTrace();
                 }
             }
-            System.out.println(Thread.currentThread().getName() + " : " + i );
+
         }
     }
 }
