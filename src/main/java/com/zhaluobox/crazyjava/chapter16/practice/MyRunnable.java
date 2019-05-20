@@ -10,9 +10,22 @@ public class MyRunnable implements Runnable {
 
     @Override
     public void run() {
+        int x = 0;
         for (int i=0; i<100; i++ ){
             System.out.println(Thread.currentThread().getName()+ " - " + i);
+            if(x == 0){
+                boolean daemon = Thread.currentThread().isDaemon();
+                System.out.println("---------------------------------");
+                if(daemon){
+                    System.out.println(Thread.currentThread().getName() + " 这个线程是守护线程[后台线程]");
+                }else{
+                    System.out.println(Thread.currentThread().getName() + " 这个线程是前台线程");
+                }
+                x++;
+            }
         }
+
+
     }
 
     /**
@@ -25,6 +38,8 @@ public class MyRunnable implements Runnable {
         // 设置后台线程必须在线程启动之前
 
         Thread t1 = new Thread(() -> {
+            // 后台线程创建的子线程也是后天线程
+            new Thread(new MyRunnable(), "后台线程的子线程").start();
             for (int i = 0; i < 1000 ; i++) {
                 System.out.println(Thread.currentThread().getName()+": " + i);
             }
@@ -32,10 +47,11 @@ public class MyRunnable implements Runnable {
         t1.setDaemon(true);
         t1.start();
 
+
         for (int i = 0; i < 100; i++) {
             System.out.println(Thread.currentThread().getName()+": " + i);
             if(i == 10) {
-                new Thread(new MyRunnable(), "子线程").start();
+                new Thread(new MyRunnable(), "main的子线程").start();
             }
         }
     }
