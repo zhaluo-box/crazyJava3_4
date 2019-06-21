@@ -75,6 +75,7 @@ public class ExtendedObjectPoolFactory {
                 Method mtd = targetClass.getMethod(mtdName, String.class);
                 // 通过Method的invoke方法执行setter方法，
                 // 将config.getProperty(name)的值作为调用setter的方法的参数
+                //target 是实例对象
                 mtd.invoke(target, config.getProperty(name));
             }
         }
