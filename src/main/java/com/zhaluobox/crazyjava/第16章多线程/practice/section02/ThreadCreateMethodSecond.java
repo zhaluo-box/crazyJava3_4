@@ -1,5 +1,14 @@
 package com.zhaluobox.crazyjava.第16章多线程.practice.section02;
 
+/**
+ * 线程创建的方式2
+ *        1. 实现Runnable
+ *        2. 重写run方法
+ *        3. 创建实例
+ *        4. 将实例作为参数传递给new Thread(Runnable runnable, String name)
+ *        5. start 启动
+ *
+ */
 public class ThreadCreateMethodSecond implements Runnable {
 
     int i =100;
@@ -22,7 +31,7 @@ public class ThreadCreateMethodSecond implements Runnable {
 
     public static void main(String[] args) {
         final ThreadCreateMethodSecond th1 = new ThreadCreateMethodSecond();
-        new Thread(th1).start();
-        new Thread(th1).start();
+        new Thread(th1,"窗口1").start();
+        new Thread(th1,"窗口2").start();
     }
 }

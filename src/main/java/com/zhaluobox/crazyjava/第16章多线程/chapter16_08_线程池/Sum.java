@@ -1,4 +1,4 @@
-package chapter16_08_线程池;
+package com.zhaluobox.crazyjava.第16章多线程.chapter16_08_线程池;
 
 import java.util.concurrent.*;
 import java.util.*;
@@ -10,7 +10,7 @@ import java.util.*;
  * This program is protected by copyright laws. <br/>
  * Program Name: <br/>
  * Date:
- * 
+ *
  * @author Yeeku.H.Lee kongyeeku@163.com
  * @version 1.0
  */

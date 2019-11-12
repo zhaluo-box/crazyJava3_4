@@ -1,9 +1,9 @@
-package chapter12_02_Swing基本组件的用法;
+package com.zhaluobox.crazyjava.第12章Swing编程.chapter12_02_Swing基本组件的用法;
 
 
-import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
 /**
  * Description:
  * <br/>网站: <a href="http://www.crazyit.org">疯狂Java联盟</a>

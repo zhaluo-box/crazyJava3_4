@@ -1,4 +1,4 @@
-package chapter16_09_ThreadLocal;
+package com.zhaluobox.crazyjava.第16章多线程.chapter16_09_ThreadLocal;
 
 /**
  * Description:隔离多线程抢占资源，使每个线程都一份资源的拷贝。 <br/>
@@ -8,7 +8,7 @@ package chapter16_09_ThreadLocal;
  * This program is protected by copyright laws. <br/>
  * Program Name: <br/>
  * Date:
- * 
+ *
  * @author Yeeku.H.Lee kongyeeku@163.com
  * @version 1.0
  */

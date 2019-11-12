@@ -3,7 +3,6 @@ package com.zhaluobox.crazyjava.第16章多线程.chapter16_02_线程的创建�
 /**
  * 可以使任意方法变成线程，并且可以有返回值。
  */
-import java.util.concurrent.Callable;
 import java.util.concurrent.FutureTask;
 
 public class ThirdThread {
@@ -12,11 +11,11 @@ public class ThirdThread {
 
 
 		//创建Callable对象（不知道干什么用fuck!）
-		ThirdThread rt = new ThirdThread();
+//		ThirdThread rt = new ThirdThread();
 
 
 		//先使用Lambda表达式创建Callable<Integer>对象,使用FutureTask来包装Callable对象
-		FutureTask< Integer> task  = new FutureTask<Integer>((Callable<Integer>)()->{
+		FutureTask< Integer> task  = new FutureTask<>(()->{
 			int i = 0;
 			for(;i<20;i++){
 				System.out.println(Thread.currentThread().getName() +"的循环变量i的值是： "+ i);
@@ -36,16 +35,12 @@ public class ThirdThread {
 			}
 		}
 
-
-
 		try{
 			//获取线程的返回值
 			System.out.println("子线程的返回值： "+task.get()); //该方法导致主线程被阻塞
 		}catch(Exception exception){
 			exception.printStackTrace();
 		}
-
-
 	}
 
 }
