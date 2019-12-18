@@ -1,4 +1,4 @@
-package com.zhaluobox.jvm.chapter07;
+package com.zhaluobox.jvm.chapter07.step2;
 
 /**
  * 子类

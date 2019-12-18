@@ -1,4 +1,4 @@
-package com.zhaluobox.jvm.chapter07;
+package com.zhaluobox.jvm.chapter07.step2;
 
 public class SuperClass {
 
@@ -27,6 +27,6 @@ public class SuperClass {
     /**
      *  如果字段被static final 修饰 那么这个字段在编译器就把结果放入了常量池.在子类调用父类的时候父类就无需初始化
      */
-    public static final String HAN_ZI_VALUE = "汉字";
+ //   public static final String HAN_ZI_VALUE = "汉字";
 
 }
