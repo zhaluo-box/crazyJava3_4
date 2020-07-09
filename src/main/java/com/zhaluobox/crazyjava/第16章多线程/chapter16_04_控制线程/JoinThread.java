@@ -7,7 +7,7 @@ package chapter16_04_控制线程;
  * This program is protected by copyright laws. <br/>
  * Program Name: <br/>
  * Date:
- * 
+ *
  * @author Yeeku.H.Lee kongyeeku@163.com
  * @version 1.0
  */
@@ -25,10 +25,17 @@ public class JoinThread extends Thread {
 		}
 	}
 
+	/**
+	 *  开始时新线程与主线程交替执行
+	 *  当join的线程加入后 新线程与主线程开始等待join线程执行完毕
+	 *  然后再执行
+	 * @param args
+	 * @throws Exception
+	 */
 	public static void main(String[] args) throws Exception {
 		// 启动子线程
 		new JoinThread("新线程").start();
-		
+
 		for (int i = 0; i < 100; i++) {
 			if (i == 20) {
 				JoinThread jt = new JoinThread("被Join的线程");

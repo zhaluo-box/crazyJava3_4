@@ -7,7 +7,7 @@ package chapter06_01_Java8增强的包装类;
  * This program is protected by copyright laws. <br/>
  * Program Name: <br/>
  * Date:
- * 
+ *
  * @author Yeeku.H.Lee kongyeeku@163.com
  * @version 1.0
  */
@@ -24,5 +24,6 @@ public class AutoBoxingUnboxing {
 			boolean b = (Boolean) boolObj;
 			System.out.println(b);
 		}
+
 	}
 }
