@@ -31,6 +31,7 @@ public class CalendarTest02 {
         System.out.println( c.getTime() );
         // 将Calendar的月前推8个月
         c.roll( MONTH, -8 ); //2002-03-23 12:32:23
+
         System.out.println( c.getTime() );
 
 
