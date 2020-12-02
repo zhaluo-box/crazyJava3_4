@@ -15,7 +15,7 @@ public class ClassUtils {
     //给一个接口，返回这个接口的所有实现类
     public static List<Class> getAllClassByInterface(Class c) {
 
-        List<Class> returnClassList = new ArrayList<Class>(); //返回结果
+        List<Class> returnClassList = new ArrayList<>(); //返回结果
         //如果不是一个接口，则不做处理
         if (c.isInterface()) {
             String packageName = c.getPackage().getName(); //获得当前的包名
