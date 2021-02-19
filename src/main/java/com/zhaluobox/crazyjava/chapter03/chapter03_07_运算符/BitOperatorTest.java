@@ -1,4 +1,4 @@
-package chapter03_07_运算符;
+package com.zhaluobox.crazyjava.chapter03.chapter03_07_运算符;
 
 /**
  * Description:
@@ -12,7 +12,7 @@ package chapter03_07_运算符;
  */
 public class BitOperatorTest
 {
-	
+
 	//移位操作：向右移n位，除以2的几次方，向左移n位，乘以2的几次方
 	//最快速算出2*8=16; 2<<<3
 	public static void main(String[] args)
