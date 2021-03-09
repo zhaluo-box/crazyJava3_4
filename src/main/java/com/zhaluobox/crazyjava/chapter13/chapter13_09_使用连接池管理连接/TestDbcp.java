@@ -1,4 +1,4 @@
-package chapter13_09_使用连接池管理连接;
+package com.zhaluobox.crazyjava.chapter13.chapter13_09_使用连接池管理连接;
 
 import org.apache.commons.dbcp.BasicDataSource;
 

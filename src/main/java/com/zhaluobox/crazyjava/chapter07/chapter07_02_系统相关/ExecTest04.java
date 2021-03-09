@@ -1,6 +1,4 @@
-package chapter07_02_系统相关;
-
-import com.sun.glass.ui.TouchInputSupport;
+package com.zhaluobox.crazyjava.chapter07.chapter07_02_系统相关;
 
 /**
  * Description: <br/>

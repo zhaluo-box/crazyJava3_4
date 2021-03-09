@@ -49,15 +49,16 @@ public class ExecutorServiceTestOne {
         final Thread1 thread1 = new Thread1();
         executorService.submit( thread1 );
         executorService.submit( thread1 );
+
         final Future<Integer> submit2 = executorService.submit( target );
         final Future<Integer> submit3 = executorService.submit( target );
+
         executorService.shutdown();
+
         try {
             System.out.println( submit2.get() );
             System.out.println( submit3.get() );
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
+        } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
     }

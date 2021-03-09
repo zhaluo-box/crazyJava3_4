@@ -1,10 +1,10 @@
-package chapter13_09_使用连接池管理连接;
+package com.zhaluobox.crazyjava.chapter13.chapter13_09_使用连接池管理连接;
+
+import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
-
-import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 public class TestC3p0 {
 
