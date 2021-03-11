@@ -11,16 +11,18 @@ public class YieldDemo {
             for (int i = 0; i < 50; i++) {
                 //先输出线程
                 System.out.println( Thread.currentThread().getName() + " : " + i );
+                Thread.yield();
 
             }
         };
 
-        for (int i = 0; i < 200; i++) {
-            System.out.println( Thread.currentThread().getName() + "  :  " + i );
-            if (i == 30) {
-                Thread.yield(); // 线程让步
-            }
-        }
+//        for (int i = 0; i < 200; i++) {
+//            System.out.println( Thread.currentThread().getName() + "  :  " + i );
+//            if (i == 30) {
+//                Thread.yield(); // 线程让步
+//            }
+//        }
+
 
         Thread thread1 = new Thread( t1, "高级" );
         Thread thread2 = new Thread( t1, "低级" );
