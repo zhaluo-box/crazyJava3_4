@@ -1,4 +1,4 @@
-package chapter10;
+package com.zhaluobox.juc.curr.art.chapter10;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.CancellationException;
@@ -8,6 +8,10 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 import java.util.concurrent.FutureTask;
 
+/**
+ * å¹¶å‘ç¼–ç¨‹çš„è‰ºæœ¯ ç¬¬10ç«  ç¤ºä¾‹ä»£ç ;
+ *
+ */
 public class ConcurrentTask {
 
     private final ConcurrentMap<Object, Future<String>> taskCache = new ConcurrentHashMap<Object, Future<String>>();
@@ -22,17 +26,17 @@ public class ConcurrentTask {
                         return taskName;
                     }
                 };
-                //1.2´´½¨ÈÎÎñ
+                //1.2åˆ›å»ºä»»åŠ¡
                 FutureTask<String> futureTask = new FutureTask<String>(task);
                 future = taskCache.putIfAbsent(taskName, futureTask); //1.3
                 if (future == null) {
                     future = futureTask;
-                    futureTask.run(); //1.4Ö´ĞĞÈÎÎñ
+                    futureTask.run(); //1.4æ‰§è¡Œä»»åŠ¡
                 }
             }
 
             try {
-                return future.get(); //1.5,2.2Ïß³ÌÔÚ´ËµÈ´ıÈÎÎñÖ´ĞĞÍê³É
+                return future.get(); //1.5,2.2çº¿ç¨‹åœ¨æ­¤ç­‰å¾…ä»»åŠ¡æ‰§è¡Œå®Œæˆ
             } catch (CancellationException e) {
                 taskCache.remove(taskName, future);
             }
