@@ -1,4 +1,4 @@
-package chapter18_05_使用反射生成JDK动态代理.DynaProxy;
+package com.zhaluobox.crazyjava.chapter18.chapter18_05_使用反射生成JDK动态代理.DynaProxy;
 
 
 /**
@@ -8,20 +8,23 @@ package chapter18_05_使用反射生成JDK动态代理.DynaProxy;
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
  * <br/>Date:
+ *
  * @author Yeeku.H.Lee kongyeeku@163.com
  * @version 1.0
  */
-public class GunDog implements Dog
-{
-	// 实现info()方法，仅仅打印一个字符串
-	public void info()
-	{
-		System.out.println("我是一只猎狗");
-	}
-	// 实现run()方法，仅仅打印一个字符串
-	public void run()
-	{
-		System.out.println("我奔跑迅速");
-	}
+
+/**
+ * 目标对象 实现了接口
+ */
+public class GunDog implements Dog {
+    // 实现info()方法，仅仅打印一个字符串
+    public void info() {
+        System.out.println("我是一只猎狗");
+    }
+
+    // 实现run()方法，仅仅打印一个字符串
+    public void run() {
+        System.out.println("我奔跑迅速");
+    }
 }
 

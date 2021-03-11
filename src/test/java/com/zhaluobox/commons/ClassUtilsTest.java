@@ -1,6 +1,6 @@
 package com.zhaluobox.commons;
 
-import com.zhaluobox.designMode.factorymode2.Human;
+import com.zhaluobox.designMode.factory.factorymode2.Human;
 import org.junit.Test;
 
 import java.util.List;

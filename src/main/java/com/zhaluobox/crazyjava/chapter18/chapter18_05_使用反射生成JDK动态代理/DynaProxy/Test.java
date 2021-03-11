@@ -1,4 +1,4 @@
-package chapter18_05_使用反射生成JDK动态代理.DynaProxy;
+package com.zhaluobox.crazyjava.chapter18.chapter18_05_使用反射生成JDK动态代理.DynaProxy;
 
 
 /**
@@ -8,20 +8,19 @@ package chapter18_05_使用反射生成JDK动态代理.DynaProxy;
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
  * <br/>Date:
+ *
  * @author Yeeku.H.Lee kongyeeku@163.com
  * @version 1.0
  */
-public class Test
-{
-	public static void main(String[] args)
-		throws Exception
-	{
-		// 创建一个原始的GunDog对象，作为target
-		Dog target = new GunDog();
-		// 以指定的target来创建动态代理
-		Dog dog = (Dog)MyProxyFactory.getProxy(target);
-		dog.info();
-		dog.run();
-	}
+public class Test {
+    public static void main(String[] args)
+            throws Exception {
+        // 创建一个原始的GunDog对象，作为target
+        Dog target = new GunDog();
+        // 以指定的target来创建动态代理
+        Dog dog = (Dog) MyProxyFactory.getProxy(target);
+        dog.info();
+        dog.run();
+    }
 }
 
