@@ -11,6 +11,10 @@ public class GamePlayerProxy implements IGamePlayer {
 
     private IGamePlayer gamePlayer;
 
+    /**
+     * 构造器注入 代理对象.
+     * @param gamePlayer
+     */
     public GamePlayerProxy(IGamePlayer gamePlayer) {
         this.gamePlayer = gamePlayer;
     }
