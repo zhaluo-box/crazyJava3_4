@@ -1,4 +1,4 @@
-package chapter08_04_List集合;
+package com.zhaluobox.crazyjava.chapter08.chapter08_04_List集合;
 
 import java.util.*;
 
@@ -8,24 +8,24 @@ import java.util.*;
  * 2.java8改进的List接口和ListIterator接口
  * 3.java8新增加void replaceAll(UnaryOperator operator) 根据指定规则重新设置List集合的所有元素
  *           void  sort(Comparator c)           根据Comparator参数对List集合的元素排序，可以用lambda作为参数
- * 
+ *
  */
 public class ListTest {
 	public static void main(String[] args) {
-		List books = new ArrayList();
-	
+		List books = new ArrayList(2);
+
 		// 向books集合中添加三个元素
 		books.add(new String("轻量级Java EE企业应用实战"));
 		books.add(new String("疯狂Java讲义"));
 		books.add(new String("疯狂Android讲义"));
 		System.out.println(books);
-		
+
 		// 将新字符串对象插入在第二个位置
 		books.add(1, new String("疯狂Ajax讲义"));
 		for (int i = 0; i < books.size(); i++) {
 			System.out.println(books.get(i));
 		}
-		
+
 		// 删除第三个元素
 		books.remove(2);
 		System.out.println(books);

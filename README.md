@@ -27,7 +27,8 @@
         - chapter 05
         - chapter 06
         - chapter 07
-        - chapter 08
+        - chapter 08  java集合容器
+            - chapter08_04_List集合
         - chapter 09
         - chapter 10
         - chapter 11
@@ -53,13 +54,13 @@
         - chapter 17
         - chapter 18 类的加载与反射
     - designMode 设计模式学习
+        - factoryMode1 工厂模式demo1
+        - factoryMode2 工厂模式demo2
+        - proxyMode1  代理模式
     - jvm 是深入jvm虚拟机的学习
-        - factorymode1 工厂模式demo1
-        - factorymode2 工厂模式demo2
-        - proxymode1  代理模式
     - offer 是面试相关常考一些东西
         -sort  排序
-    - niuke   牛客网练习测试
+    - NiuKe   牛客网练习测试
         - demo1  考察多态性 编译看左边 运行看右边
         - demo2  考察三目运算以及三目运算中隐含的 类型自动提升
 
