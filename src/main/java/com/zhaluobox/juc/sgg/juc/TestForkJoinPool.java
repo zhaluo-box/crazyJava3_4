@@ -1,13 +1,13 @@
 package com.zhaluobox.juc.sgg.juc;
 
+import org.junit.Test;
+
 import java.time.Duration;
 import java.time.Instant;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.ForkJoinTask;
 import java.util.concurrent.RecursiveTask;
 import java.util.stream.LongStream;
-
-import org.junit.Test;
 
 public class TestForkJoinPool {
 
@@ -46,7 +46,7 @@ public class TestForkJoinPool {
 
 	//java8 新特性
 	@Test
-	public void test2(){
+	public void 																																test2(){
 		Instant start = Instant.now();
 
 		Long sum = LongStream.rangeClosed(0L, 50000000000L)

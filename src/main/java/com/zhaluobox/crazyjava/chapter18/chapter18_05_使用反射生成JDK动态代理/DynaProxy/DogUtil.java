@@ -9,7 +9,7 @@ package com.zhaluobox.crazyjava.chapter18.chapter18_05_使用反射生成JDK动�
  * <br/>Program Name:
  * <br/>Date:
  *
- * @author Yeeku.H.Lee kongyeeku@163.com
+ * @author Yeeku.H.Lee kongyeeku@163.come
  * @version 1.0
  */
 

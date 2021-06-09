@@ -1,4 +1,4 @@
-package chapter06_09_枚举类;
+package com.zhaluobox.crazyjava.chapter06.chapter06_09_枚举类;
 
 //改进的Gender类，增强封装
 public enum Gender06{

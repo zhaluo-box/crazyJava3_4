@@ -1,10 +1,11 @@
-package chapter17_03_基于TCP协议的网络编程;
+package com.zhaluobox.crazyjava.chapter17.chapter17_03_基于TCP协议的网络编程;
 
-import java.net.*;
-
-import com.sun.java_cup.internal.runtime.Scanner;
-
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.InetSocketAddress;
+import java.net.Socket;
+import java.net.SocketTimeoutException;
 
 /**
  * Description: <br/>

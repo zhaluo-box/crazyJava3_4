@@ -1,11 +1,13 @@
-package chapter13_06_Java7的RowSet;
+package com.zhaluobox.crazyjava.chapter13.chapter13_06_Java7的RowSet;
 
 
-import java.util.*;
-import java.io.*;
-import java.sql.*;
-import javax.sql.rowset.*;
-import com.sun.rowset.*;
+import com.sun.rowset.JdbcRowSetImpl;
+
+import javax.sql.rowset.JdbcRowSet;
+import java.io.FileInputStream;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.util.Properties;
 /**
  * Description:
  * <br/>网站: <a href="http://www.crazyit.org">疯狂Java联盟</a>

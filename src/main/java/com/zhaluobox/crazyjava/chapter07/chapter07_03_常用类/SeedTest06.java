@@ -1,9 +1,7 @@
-package chapter07_03_常用类;
+package com.zhaluobox.crazyjava.chapter07.chapter07_03_常用类;
 
-import java.util.*;
+import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
-
-import com.sun.xml.internal.ws.api.server.ThreadLocalContainerResolver;
 /**
  * Description:
  * 1.Random使用一个48位的种子，如果这个类的两个实例是同一个种子创建，对他们以同样的顺序调用方法，则他们会产生相同的数字序列。<br>
