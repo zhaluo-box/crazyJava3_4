@@ -1,4 +1,4 @@
-package chapter03;
+package com.zhaluobox.juc.curr.art.chapter03;
 
 class MonitorExample {
     int a = 0;
@@ -9,6 +9,6 @@ class MonitorExample {
 
     public synchronized void reader() { //4
         int i = a; //5
-        //¡­¡­
+        //â€¦â€¦
     } //6
 }

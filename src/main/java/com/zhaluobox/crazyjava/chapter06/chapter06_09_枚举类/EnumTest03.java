@@ -9,6 +9,8 @@ package com.zhaluobox.crazyjava.chapter06.chapter06_09_枚举类;
  * <br/>Program Name:
  * <br/>Date:
  *
+ * 练习 exercise
+ *
  * @author Yeeku.H.Lee kongyeeku@163.com
  * @version 1.0
  */

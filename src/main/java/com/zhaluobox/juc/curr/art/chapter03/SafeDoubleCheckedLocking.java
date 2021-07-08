@@ -1,4 +1,4 @@
-package chapter03;
+package com.zhaluobox.juc.curr.art.chapter03;
 
 public class SafeDoubleCheckedLocking {
     private volatile static Instance instance;
@@ -7,7 +7,7 @@ public class SafeDoubleCheckedLocking {
         if (instance == null) {
             synchronized (SafeDoubleCheckedLocking.class) {
                 if (instance == null)
-                    instance = new Instance();//instanceÎªvolatile£¬ÏÖÔÚÃ»ÎÊÌâÁË
+                    instance = new Instance();//instanceä¸ºvolatileï¼Œç°åœ¨æ²¡é—®é¢˜äº†
             }
         }
         return instance;

@@ -1,18 +1,18 @@
-package chapter03;
+package com.zhaluobox.juc.curr.art.chapter03;
 
 class SynchronizedExample {
     int     a    = 0;
     boolean flag = false;
 
-    public synchronized void writer() { //»ñÈ¡Ëø
+    public synchronized void writer() { //ï¿½ï¿½È¡ï¿½ï¿½
         a = 1;
         flag = true;
-    } //ÊÍ·ÅËø
+    } //ï¿½Í·ï¿½ï¿½ï¿½
 
-    public synchronized void reader() { //»ñÈ¡Ëø
+    public synchronized void reader() { //ï¿½ï¿½È¡ï¿½ï¿½
         if (flag) {
             int i = a;
-            //¡­¡­
-        } //ÊÍ·ÅËø
+            //ï¿½ï¿½ï¿½ï¿½
+        } //ï¿½Í·ï¿½ï¿½ï¿½
     }
 }

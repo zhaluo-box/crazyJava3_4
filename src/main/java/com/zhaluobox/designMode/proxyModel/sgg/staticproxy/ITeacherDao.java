@@ -1,8 +1,8 @@
 package com.zhaluobox.designMode.proxyModel.sgg.staticproxy;
 
 
-//½Ó¿Ú
+//æ¥å£
 public interface ITeacherDao {
 
-	void teach(); // ÊÚ¿ÎµÄ·½·¨
+	void teach(); // æˆè¯¾çš„æ–¹æ³•
 }

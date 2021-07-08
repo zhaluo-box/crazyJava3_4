@@ -4,5 +4,5 @@ public enum CheckEnum {
     
     HOTEL,
     INSCOM,
-    INS
+    INS;
 }

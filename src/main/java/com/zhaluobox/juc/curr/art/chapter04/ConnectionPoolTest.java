@@ -1,4 +1,4 @@
-package chapter04;
+package com.zhaluobox.juc.curr.art.chapter04;
 
 import java.sql.Connection;
 import java.util.concurrent.CountDownLatch;
@@ -9,13 +9,13 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class ConnectionPoolTest {
     static ConnectionPool pool  = new ConnectionPool(10);
-    // 保证所有ConnectionRunner能够同时开始
+    // ???????ConnectionRunner????????
     static CountDownLatch start = new CountDownLatch(1);
-    // main线程将会等待所有ConnectionRunner结束后才能继续执行
+    // main????????????ConnectionRunner???????????????
     static CountDownLatch end;
 
     public static void main(String[] args) throws Exception {
-        // 线程数量，可以线程数量进行观察
+        // ???????????????????????泄??
         int threadCount = 50;
         end = new CountDownLatch(threadCount);
         int count = 20;
@@ -51,8 +51,8 @@ public class ConnectionPoolTest {
             }
             while (count > 0) {
                 try {
-                    // 从线程池中获取连接，如果1000ms内无法获取到，将会返回null
-                    // 分别统计连接获取的数量got和未获取到的数量notGot
+                    // ???????谢??????????1000ms??????????????????null
+                    // ??????????????????got??未???????????notGot
                     Connection connection = pool.fetchConnection(1000);
                     if (connection != null) {
                         try {
